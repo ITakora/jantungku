@@ -2,6 +2,7 @@
 import Navbar from "../components/navbar.jsx";
 import HeroSection from "../components/HeroSection.jsx";
 import AboutSection from "../components/AboutSection.jsx";
+import FeatureSection from "../components/FeatureSection.jsx";
 
 const LandingPage = () => {
     return (
@@ -10,6 +11,7 @@ const LandingPage = () => {
         <Navbar/>
         <HeroSection/>
             <AboutSection/>
+            <FeatureSection/>
         </div>
     )
 }

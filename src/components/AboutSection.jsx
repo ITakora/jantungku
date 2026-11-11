@@ -1,12 +1,12 @@
 const AboutSection = () => {
     return (
-        <section id="about" className="scroll-mt-20 px-6 py-20">
+        <section id="about" className="scroll-mt-40 px-6 py-40">
             <div className="max-w-7xl mx-auto">
                 <h2 className="text-3xl font-bold  text-[#131418] max-w-7xl text-center leading-tight">
-                    Kenali kondisi jantungmu dari gejala yang kamu rasakan
+                    Kenali Kondisi Jantungmu Dari Gejala Yang Kamu Rasakan
                 </h2>
 
-                <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
 
                     <article className="rounded-3xl bg-[#F8DBD5] p-8 flex flex-col">
                         <h3 className="text-xl font-semibold text-[#131418]">Apa itu Jantungku?</h3>

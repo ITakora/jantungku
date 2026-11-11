@@ -21,21 +21,18 @@ const Navbar = () => {
                      id="navbar-cta">
                     <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-default rounded-base bg-neutral-secondary-soft md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-neutral-primary">
                         <li>
-                            <a href="#"
+                            <a href="#hero"
                                className="block py-2 px-3 hover:bg-white hover:text-black leading rounded-2xl " >Home</a>
                         </li>
                         <li>
-                            <a href="#"
+                            <a href="#about"
                                className="block py-2 px-3 hover:bg-white hover:text-black leading rounded-2xl  ">About</a>
                         </li>
                         <li>
-                            <a href="#"
-                               className="block py-2 px-3 hover:bg-white hover:text-black leading rounded-2xl  ">Services</a>
+                            <a href="#features"
+                               className="block py-2 px-3 hover:bg-white hover:text-black leading rounded-2xl  ">Features</a>
                         </li>
-                        <li>
-                            <a href="#"
-                               className="block py-2 px-3 hover:bg-white hover:text-black leading rounded-2xl ">Contact</a>
-                        </li>
+
                     </ul>
                 </div>
             </div>
