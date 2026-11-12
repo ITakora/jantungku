@@ -4,7 +4,7 @@ export const db = new Dexie('cf-heart');
 
 db.version(1).stores({
     symptoms: 'code',
-    users: '++id, &username, role',
+    users: '++id, &username, password, role',
     diagnoses: '++id, userId, createdAt',
 });
 

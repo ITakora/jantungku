@@ -1,3 +1,6 @@
+import {Link} from "react-router";
+
+
 const Navbar = () => {
     return (
 
@@ -9,9 +12,9 @@ const Navbar = () => {
                     <span className="self-center text-xl text-heading font-semibold whitespace-nowrap">Jantungku</span>
                 </a>
                 <div className="inline-flex md:order-2 item-center gap-3 ">
-                    <button type="button"
-                            className=" px-3 py-2 border rounded-lg bg-amber-800 hover:bg-white hover:text-black leading rounded-2xl   ">Sign In
-                    </button>
+                    <Link  to='/signin'
+                            className=" px-3 py-2 border rounded-lg bg-amber-800 hover:bg-white hover:text-black leading rounded-2xl   " >Sign In
+                    </Link>
                     <button type="button"
                             className=" px-3 py-2 border rounded-lg bg-amber-800 hover:bg-white hover:text-black leading rounded-2xl   ">Sign Up
                     </button>

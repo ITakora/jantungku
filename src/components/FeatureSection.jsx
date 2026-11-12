@@ -15,9 +15,7 @@ const FeatureSection = () => {
                             jantung berdasarkan gejala yang kamu pilih. Hasilnya ditampilkan sebagai
                             tingkat keyakinan, lengkap dengan saran tindak lanjut.
                         </p>
-                        <p className="mt-auto pt-6 text-sm text-[#A7392A]">
-                            Hasil diagnosa tidak menggantikan pemeriksaan dokter.
-                        </p>
+
                     </article>
 
 
