@@ -12,8 +12,9 @@ const SignIn = () => {
 
 
 
-    return ( <div className="min-h-screen flex items-center justify-center bg-gray-100 px-4">
-            <div className="bg-white w-full max-w-sm shadow-md rounded-xl p-6">
+    return (
+        <div className="min-h-screen flex items-center justify-center bg-gray-100 px-4">
+            <div className="bg-white w-full max-w-sm max-h- shadow-md rounded-xl p-6">
                 <h1 className="text-2xl font-bold text-center text-gray-800">Sign In</h1>
 
 

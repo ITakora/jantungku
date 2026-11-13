@@ -5,7 +5,7 @@ const Navbar = () => {
     return (
 
 
-        <nav className="bg-[#F8DBD5]  fixed w-full z-20 top-0 inset-s-0 border-b border-default">
+        <nav className="bg-transparent  fixed w-full z-20 top-0 inset-s-0  border-default">
             <div className="max-w-7xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <a href="" className="flex items-center space-x-3 rtl:space-x-reverse">
                     <img src="" className="h-7" alt=""/>
@@ -13,11 +13,11 @@ const Navbar = () => {
                 </a>
                 <div className="inline-flex md:order-2 item-center gap-3 ">
                     <Link  to='/signin'
-                            className=" px-3 py-2 border rounded-lg bg-amber-800 hover:bg-white hover:text-black leading rounded-2xl   " >Sign In
+                            className=" px-3 py-2  font-medium  rounded-xl text-white bg-[#1F6B5C] hover:bg-[#195A4D]     " >Sign In
                     </Link>
-                    <button type="button"
-                            className=" px-3 py-2 border rounded-lg bg-amber-800 hover:bg-white hover:text-black leading rounded-2xl   ">Sign Up
-                    </button>
+                    <Link to='/signup'
+                            className=" px-3 py-2 border  font-medium rounded-xl text-white bg-[#1F6B5C] hover:bg-[#195A4D]   ">Sign Up
+                    </Link>
 
                 </div>
                 <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
