@@ -8,7 +8,15 @@ const UserNavbar = () => {
                 <span className="self-center text-xl text-heading font-semibold whitespace-nowrap">Jantungku</span>
             </a>
 
-            <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+            <div className="inline-flex md:order-2 item-center gap-3 ">
+                <Link  to='/'
+                       className=" px-3 py-2  font-medium  rounded-xl text-white bg-[#1F6B5C] hover:bg-[#195A4D]     " > Log Out
+                </Link>
+
+
+            </div>
+
+            <div className=" hidden w-full md:flex md:w-auto md:order-1"
                  id="navbar-cta">
                 <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-default rounded-base bg-neutral-secondary-soft md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-neutral-primary">
                     <li>
