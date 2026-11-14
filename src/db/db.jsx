@@ -4,7 +4,7 @@ export const db = new Dexie('cf-heart');
 
 db.version(1).stores({
     symptoms: 'code',
-    users: '++id, &username, password, role',
+    users: '++id, &username, role',
     diagnoses: '++id, userId, createdAt',
 });
 
@@ -19,5 +19,8 @@ db.on('populate', () => {
         { code: 'D07', name: 'Max HR (<140)', cfExpert: 0.8 },
         { code: 'D08', name: 'Resting ECG', cfExpert: 0.6 },
     ]);
-    db.users.add({ username: 'admin', role: 'admin' });
+    db.users.bulkAdd([
+        { username: 'admin', password: 'admin123', role: 'admin' },
+        { username: 'user', password: 'user123', role: 'user' },
+    ]);
 });

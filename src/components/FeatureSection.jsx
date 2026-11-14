@@ -1,6 +1,6 @@
 const FeatureSection = () => {
     return (
-        <section id="features" className=" bg-[#E4EBE8] scroll-mt-40 px-6 py-50">
+        <section id="features" className=" bg-[#E4EBE8] scroll-mt-40 px-6 py-60">
             <div className="max-w-7xl mx-auto">
                 <h2 className="text-3xl font-bold  text-[#131418] max-w-7xl text-center leading-tight">
                     Apa saja Yang Feature Yang Tersedia?
