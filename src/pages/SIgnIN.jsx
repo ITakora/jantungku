@@ -22,7 +22,7 @@ const SignIn = () => {
         }
 
         saveSession(user);
-        navigate(user.role === "admin" ? "/admin" : "/diagnosis");
+        navigate('/user/diagnosis');
     }
 
 

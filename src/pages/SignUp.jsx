@@ -40,7 +40,7 @@ const SignIn = () => {
         });
 
         saveSession({id, username: name, role: "user"});
-        navigate("/");
+        navigate("/signin");
     }
 
 
