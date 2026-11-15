@@ -3,9 +3,9 @@ import Dexie from 'dexie';
 export const db = new Dexie('cf-heart');
 
 db.version(1).stores({
-    symptoms: 'code',
-    users: '++id, &username, role',
-    diagnoses: '++id, userId, createdAt',
+    symptoms: 'code, name, cfExpert',
+    users: '++id, &username,password, role',
+    diagnoses: '++id, userId,  createdAt',
 });
 
 db.on('populate', () => {

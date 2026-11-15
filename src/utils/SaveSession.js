@@ -9,7 +9,7 @@ export function saveSession(user) {
 
 export function getUser() {
     try {
-        return JSON.parse(localStorage.getItem("user")); // { id, username, role } or null
+        return JSON.parse(localStorage.getItem("user"));
     } catch {
         return null;
     }

@@ -20,11 +20,11 @@ const UserNavbar = () => {
                  id="navbar-cta">
                 <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-default rounded-base bg-neutral-secondary-soft md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-neutral-primary">
                     <li>
-                        <Link to=""
+                        <Link to="/user/diagnosis"
                            className="block py-2 px-3 hover:bg-white hover:text-black leading rounded-2xl " >Diagnosis</Link>
                     </li>
                     <li>
-                        <Link to=""
+                        <Link to="/user/history"
                               className="block py-2 px-3 hover:bg-white hover:text-black leading rounded-2xl  ">History</Link>
                     </li>
                     {/*<li>*/}

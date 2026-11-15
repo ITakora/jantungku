@@ -11,7 +11,7 @@ const DiagnosisInput = () => {
     const [result, setResult] = useState(null);
 
     const symptoms = useLiveQuery(() => db.symptoms.toArray());
-
+    const barWidth = Math.min(100, Math.max(0, result * 100));
 
     const handleChange = (code, value) => {
         setAnswers((prev) => ({ ...prev, [code]: value }));
@@ -51,10 +51,7 @@ const DiagnosisInput = () => {
     return (
         <div className="min-h-screen mx-auto bg-[#E4EBE8] pt-10 pb-16">
             <h1 className="font-bold ml-20 mt-10 text-2xl">Halo, {user?.username}</h1>
-
-
-
-
+            <p className=" ml-20 mt-3  ">Input Gejala yang anda rasakan di bawah</p>
 
 
             {symptoms?.length > 0 && (
@@ -72,14 +69,14 @@ const DiagnosisInput = () => {
                         <div className="bg-white rounded-xl shadow-md p-6 mx-10 mt-7">
                             <p className="text-sm text-gray-500 ml-5">Hasil Diagnosis</p>
                             <p className="text-4xl font-bold text-[#1F6B5C] mt-1 ml-5">
-                                {toPercent(result)}%
+                                {toPercent(Math.abs(Number(result)))}%
                             </p>
-                            <p className="text-gray-700 ml-5">Terdiagnosis Penyakit jantung</p>
+                            <p className="text-gray-700 ml-5">{result >= 0 ? "Terdiagnosis penyakit jantung" : "Tidak terdiagnosis penyakit jantung"}</p>
 
                             <div className="h-2 bg-gray-200 rounded-full mt-4 mx-5 overflow-hidden">
                                 <div
                                     className="h-full bg-[#1F6B5C]"
-                                    style={{ width: `${result * 100}%` }}
+                                    style={{ width: `${barWidth}%` }}
                                 />
                             </div>
 

@@ -3,7 +3,7 @@ import {CF_LEVELS} from "../utils/CalculateCF.js";
 const CardSymptom = ({ symptom, value, onChange }) => {
 
     return (
-        <div className="rounded-4xl bg-white p-7 flex flex-row shadow-md max-w-screen justify-between items-center gap-4 mx-10 mt-7">
+        <div className="rounded-4xl bg-white p-7 flex flex-row shadow-md max-w-screen justify-between items-center gap-4 mx-8 mt-5">
             <div className="ml-5">
                 <h3 className="font-medium">{symptom}</h3>
 

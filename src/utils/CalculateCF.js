@@ -1,3 +1,4 @@
+
 export const CF_LEVELS = [
 
     {label: "Definitely Not", value: -1.0},
@@ -13,12 +14,17 @@ export const CF_LEVELS = [
 
 
 export function calculateCF(items) {
-    return items.reduce((old, { cfUser, cfExpert }) => {
+    let old = 0;
+    for (const { cfUser, cfExpert } of items) {
         const cf = cfUser * cfExpert;
-        return old + cf * (1 - old);
-    }, 0);
+        if (old >= 0 && cf >= 0) return old + cf * (1 - old);
+        if (old <= 0 && cf <= 0) return old + cf * (1 + old);
+        old = (old + cf) / (1 - Math.min(Math.abs(old), Math.abs(cf)));
+    }
+    return old;
 }
 
 export function toPercent(value) {
+
     return (value * 100).toFixed(2);
 }
