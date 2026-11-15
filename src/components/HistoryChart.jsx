@@ -29,7 +29,7 @@ const timeLabel = (timestamp) =>
 const verdict = (signed) =>
     signed > 0 ? "terdiagnosis" : signed < 0 ? "tidak terdiagnosis" : "tidak ada indikasi";
 
-// The small box that appears when you hover a bar
+
 const ChartTooltip = ({ active, payload }) => {
     if (!active || !payload?.length) return null;
     const bar = payload[0].payload;

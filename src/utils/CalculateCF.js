@@ -17,10 +17,15 @@ export function calculateCF(items) {
     let old = 0;
     for (const { cfUser, cfExpert } of items) {
         const cf = cfUser * cfExpert;
-        if (old >= 0 && cf >= 0) return old + cf * (1 - old);
-        if (old <= 0 && cf <= 0) return old + cf * (1 + old);
-        old = (old + cf) / (1 - Math.min(Math.abs(old), Math.abs(cf)));
+        if (old >= 0 && cf >= 0) {
+            old = old + cf * (1 - old);
+        } else if (old <= 0 && cf <= 0) {
+            old = old + cf * (1 + old);
+        } else {
+            old = (old + cf) / (1 - Math.min(Math.abs(old), Math.abs(cf)));
+        }
     }
+
     return old;
 }
 

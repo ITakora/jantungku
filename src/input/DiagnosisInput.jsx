@@ -4,11 +4,13 @@ import { useLiveQuery } from "dexie-react-hooks";
 import {db} from "../db/db.jsx";
 import {useState} from "react";
 import {calculateCF, toPercent} from "../utils/CalculateCF.js";
+import {getSuggestion} from "../utils/Suggestion.js";
 
 const DiagnosisInput = () => {
     const user = getUser();
     const [answers, setAnswers] = useState({});
     const [result, setResult] = useState(null);
+    const [tips, setTips] = useState("");
 
     const symptoms = useLiveQuery(() => db.symptoms.toArray());
     const barWidth = Math.min(100, Math.max(0, result * 100));
@@ -40,11 +42,14 @@ const DiagnosisInput = () => {
 
         setResult(value);
 
+        setTips(getSuggestion(inputs));
+
     };
 
     const handleReset = () => {
         setAnswers({});
         setResult(null);
+        setTips("");
     };
 
 
@@ -79,6 +84,9 @@ const DiagnosisInput = () => {
                                     style={{ width: `${barWidth}%` }}
                                 />
                             </div>
+
+                            <p className="text-sm text-gray-500 mt-6 ml-5">Saran</p>
+                            <p className="text-gray-700 mt-1 mx-5">{tips}</p>
 
                             <p className="text-xs text-gray-500 mt-4 mx-5">
                                Ini hanya edukasi expert system, Bukan real diagnosis medikal. Temui Dokter untuk concern lebih lanjut
