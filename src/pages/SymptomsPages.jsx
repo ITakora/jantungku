@@ -8,7 +8,7 @@ const CF_OPTIONS = [0.4, 0.6, 0.8, 1.0];
 const SymptomsPages = () => {
     const [symptoms, setSymptoms] = useState([]);
     const [form, setForm] = useState(emptyForm);
-    const [editingCode, setEditingCode] = useState(null); // null = add mode
+    const [editingCode, setEditingCode] = useState(null);
     const [error, setError] = useState("");
 
     const [refreshKey, setRefreshKey] = useState(0);
@@ -55,16 +55,15 @@ const SymptomsPages = () => {
         const cfExpert = parseFloat(form.cfExpert);
 
         if (!code || !name) {
-            setError("Code and name are required");
+            setError("Code dan nama wajib diisi");
             return;
         }
         if (!CF_OPTIONS.includes(cfExpert)) {
-            setError("Please choose a CF Expert value (0.4, 0.6, 0.8 or 1.0)");
+            setError("Pilih value diantara (0.4, 0.6, 0.8 or 1.0)");
             return;
         }
 
         if (editingCode) {
-            // code is the primary key, so it stays fixed while editing
             await db.symptoms.update(editingCode, { name, cfExpert });
         } else {
             const exists = await db.symptoms.get(code);
@@ -90,10 +89,9 @@ const SymptomsPages = () => {
 
             <div className="min-h-screen bg-[#E4EBE8] px-4 pt-24 pb-10">
                 <div className="max-w-4xl mx-auto space-y-6">
-                    {/* Form */}
                     <div className="bg-white shadow-md rounded-xl p-6">
                         <h2 className="text-xl font-bold text-gray-800 mb-4">
-                            {editingCode ? `Edit Symptom (${editingCode})` : "Add Symptom"}
+                            {editingCode ? `Edit Gejala (${editingCode})` : "Tambah Gejala"}
                         </h2>
 
                         <form
@@ -117,7 +115,7 @@ const SymptomsPages = () => {
 
                             <div>
                                 <label className="block text-sm font-medium text-gray-700 mb-1">
-                                    Name
+                                    Nama
                                 </label>
                                 <input
                                     type="text"
@@ -157,7 +155,7 @@ const SymptomsPages = () => {
                                     type="submit"
                                     className="bg-[#1F6B5C] hover:bg-[#195A4D] text-white font-medium px-5 py-2 rounded-md transition"
                                 >
-                                    {editingCode ? "Save Changes" : "Add Symptom"}
+                                    {editingCode ? "Simpan Gejala" : "Tambah Gejala"}
                                 </button>
                                 {editingCode && (
                                     <button
@@ -180,7 +178,7 @@ const SymptomsPages = () => {
                             <thead className="text-gray-600 border-b">
                             <tr>
                                 <th className="py-2 pr-4">Code</th>
-                                <th className="py-2 pr-4">Name</th>
+                                <th className="py-2 pr-4">Nama Gejala</th>
                                 <th className="py-2 pr-4">CF Expert</th>
                                 <th className="py-2 text-right">Value</th>
                             </tr>
@@ -201,13 +199,6 @@ const SymptomsPages = () => {
                                     </td>
                                 </tr>
                             ))}
-                            {symptoms.length === 0 && (
-                                <tr>
-                                    <td colSpan={4} className="py-4 text-center text-gray-500">
-                                        No symptoms yet
-                                    </td>
-                                </tr>
-                            )}
                             </tbody>
                         </table>
                     </div>
