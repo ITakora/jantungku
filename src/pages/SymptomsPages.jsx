@@ -80,12 +80,7 @@ const SymptomsPages = () => {
 
     return (
         <>
-            <DashboardNavbar
-                nameNav1="Symptoms"
-                to1="/admin/symptoms"
-                nameNav2="Data"
-                to2="/admin/data"
-            />
+
 
             <div className="min-h-screen bg-[#E4EBE8] px-4 pt-24 pb-10">
                 <div className="max-w-4xl mx-auto space-y-6">
