@@ -1,7 +1,7 @@
 import {getUser} from "../utils/SaveSession.js";
 import {useLiveQuery} from "dexie-react-hooks";
 import {db} from "../db/db.jsx";
-import UserNavbar from "../components/UserNavbar.jsx";
+import DashboardNavbar from "../components/DashboardNavbar.jsx";
 import {Link} from "react-router";
 import HistoryChart from "../components/HistoryChart.jsx";
 import {CF_LEVELS, toPercent} from "../utils/CalculateCF.js";
@@ -36,7 +36,7 @@ const UserHistoryPage = () => {
 
     return (
         <>
-            <UserNavbar />
+            <DashboardNavbar nameNav1="Diagnosis" to1="/user/diagnosis" nameNav2="History" to2="/user/history"/>
 
             <div className="min-h-screen bg-[#E4EBE8] pt-10 pb-16">
                 <h1 className="font-bold ml-20 mt-10 text-2xl">Riwayat Diagnosis</h1>
@@ -47,8 +47,8 @@ const UserHistoryPage = () => {
                     <div className="rounded-lg bg-white p-7 shadow-md mx-10 mt-7 text-center">
                         <p className="text-gray-600">Kamu belum pernah melakukan diagnosis.</p>
                         <Link
-                            to="/diagnosis"
-                            className="inline-block mt-3 text-[#1F6B5C] hover:underline"
+                            to="/user/diagnosis"
+                            className="inline-block mt-3 text-white  p-4 bg-[#1F6B5C] hover:bg-[#195A4D]  rounded-3xl "
                         >
                             Mulai diagnosis pertama
                         </Link>

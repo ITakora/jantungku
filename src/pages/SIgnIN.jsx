@@ -22,6 +22,10 @@ const SignIn = () => {
         }
 
         saveSession(user);
+        if (user.role === "admin") {
+            navigate("/admin/symptoms");
+            return;
+        }
         navigate('/user/diagnosis');
     }
 

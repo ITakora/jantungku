@@ -1,6 +1,6 @@
 import {Link} from "react-router";
 
-const UserNavbar = () => {
+const DashboardNavbar = ({nameNav1, nameNav2, to1, to2}) => {
     return ( <nav className="bg-transparent  fixed w-full z-20 top-0 inset-s-0  border-default">
         <div className="max-w-7xl flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="" className="flex items-center space-x-3 rtl:space-x-reverse">
@@ -20,12 +20,12 @@ const UserNavbar = () => {
                  id="navbar-cta">
                 <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-default rounded-base bg-neutral-secondary-soft md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-neutral-primary">
                     <li>
-                        <Link to="/user/diagnosis"
-                           className="block py-2 px-3 hover:bg-white hover:text-black leading rounded-2xl " >Diagnosis</Link>
+                        <Link to={to1}
+                           className="block py-2 px-3 hover:bg-white hover:text-black leading rounded-2xl " >{nameNav1}</Link>
                     </li>
                     <li>
-                        <Link to="/user/history"
-                              className="block py-2 px-3 hover:bg-white hover:text-black leading rounded-2xl  ">History</Link>
+                        <Link to={to2}
+                              className="block py-2 px-3 hover:bg-white hover:text-black leading rounded-2xl  ">{nameNav2}</Link>
                     </li>
                     {/*<li>*/}
                     {/*    <Link to="" */}
@@ -41,4 +41,4 @@ const UserNavbar = () => {
 
 
 
-export default UserNavbar
+export default DashboardNavbar
