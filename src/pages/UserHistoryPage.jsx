@@ -126,7 +126,7 @@ const UserHistoryPage = () => {
 
                                     <button
                                         onClick={() => handleDelete(item.id)}
-                                        className="mt-4 text-sm text-white p-3 bg-red-600 hover:bg-red-700 rounded-xl"
+                                        className="mt-4 text-sm text-white p-3 bg-[#1F6B5C] hover:bg-[#195A4D] rounded-xl font-medium"
                                     >
                                         Hapus riwayat ini
                                     </button>

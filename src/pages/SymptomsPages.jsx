@@ -83,7 +83,7 @@ const SymptomsPages = () => {
 
 
             <div className="min-h-screen bg-[#E4EBE8] px-4 pt-24 pb-10">
-                <div className="max-w-4xl mx-auto space-y-6">
+                <div className="max-w-7xl mx-auto space-y-6">
                     <div className="bg-white shadow-md rounded-xl p-6">
                         <h2 className="text-xl font-bold text-gray-800 mb-4">
                             {editingCode ? `Edit Gejala (${editingCode})` : "Tambah Gejala"}
@@ -169,10 +169,10 @@ const SymptomsPages = () => {
                         <h2 className="text-xl font-bold text-gray-800 mb-4">Symptoms</h2>
 
                         <table className="w-full text-sm text-left">
-                            <thead className="text-gray-600 border-b">
+                            <thead className="text-gray-600 border-b ">
                             <tr>
                                 <th className="py-2 pr-4">Code</th>
-                                <th className="py-2 pr-4">Nama Gejala</th>
+                                <th className="py-2 pr-4">Pertanyaan</th>
                                 <th className="py-2 pr-4">CF Expert</th>
                                 <th className="py-2 text-right">Value</th>
                             </tr>
@@ -186,7 +186,7 @@ const SymptomsPages = () => {
                                     <td className="py-2 text-right">
                                         <button
                                             onClick={() => handleEdit(s)}
-                                            className="text-[#1F6B5C] hover:underline font-medium"
+                                            className="t-4 text-sm text-white p-3 bg-[#1F6B5C] hover:bg-[#195A4D] rounded-xl font-medium"
                                         >
                                             Edit
                                         </button>

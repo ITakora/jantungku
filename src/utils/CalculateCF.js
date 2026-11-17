@@ -1,15 +1,15 @@
 
 export const CF_LEVELS = [
 
-    {label: "Definitely Not", value: -1.0},
-    {label: "Almost Certainly Not", value: -0.8},
-    {label: "Probably Not", value: -0.6},
-    {label: "Maybe Not", value: -0.4},
-    { label: 'No', value: 0 },
-    { label: 'Maybe', value: 0.4 },
-    { label: 'Probably', value: 0.6 },
-    { label: 'Almost certainly', value: 0.8 },
-    { label: 'Definitely', value: 1.0 },
+    {label: "Sudah pasti tidak", value: -1.0},
+    {label: "Hampir Pasti Tidak", value: -0.8},
+    {label: "Kemungkinan Tidak", value: -0.6},
+    {label: "Mungkin Tidak", value: -0.4},
+    { label: 'Tidak', value: 0 },
+    { label: 'Mungkin', value: 0.4 },
+    { label: 'Kemungkinan', value: 0.6 },
+    { label: 'Hampir Pasti', value: 0.8 },
+    { label: 'Sudah Pasti', value: 1.0 },
 ];
 
 

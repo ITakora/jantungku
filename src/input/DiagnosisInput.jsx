@@ -10,7 +10,7 @@ const DiagnosisInput = () => {
     const user = getUser();
     const [answers, setAnswers] = useState({});
     const [result, setResult] = useState(null);
-    const [tips, setTips] = useState("");
+    const [tips, setTips] = useState([]);
 
     const symptoms = useLiveQuery(() => db.symptoms.toArray());
     const barWidth = Math.min(100, Math.max(0, result * 100));
@@ -86,7 +86,17 @@ const DiagnosisInput = () => {
                             </div>
 
                             <p className="text-sm text-gray-500 mt-6 ml-5">Saran</p>
-                            <p className="text-gray-700 mt-1 mx-5">{tips}</p>
+                            {tips.length > 0 ? (
+                                <ul className="list-disc pl-5 text-gray-700 mt-1 mx-5 space-y-1">
+                                    {tips.map((tip, index) => (
+                                        <li key={index}>{tip}</li>
+                                    ))}
+                                </ul>
+                            ) : (
+                                <p className="text-gray-700 mt-1 mx-5">
+                                    Tidak ada gejala signifikan. Tetap jaga pola makan dan rutin berolahraga.
+                                </p>
+                            )}
 
                             <p className="text-xs text-gray-500 mt-4 mx-5">
                                Ini hanya edukasi expert system, Bukan real diagnosis medikal. Temui Dokter untuk concern lebih lanjut

@@ -16,11 +16,10 @@ export const SUGGESTIONS = {
 
 
 export function getSuggestion(inputs) {
-    const  sentences = inputs
+    return   inputs
         .filter((item) => item.cfUser >= MIN_CF && SUGGESTIONS[item.code])
         .sort((a, b) => b.cfUser * b.cfExpert - a.cfUser * a.cfExpert)
         .slice(0, MAX_TIPS)
         .map((item) => SUGGESTIONS[item.code]);
 
-    return `${sentences.join()}`;
 }
