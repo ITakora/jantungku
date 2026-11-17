@@ -12,17 +12,15 @@ const AdminHistoryPage = () => {
     const [diagnoses, setDiagnoses] = useState([]);
 
     useEffect(() => {
-        let cancelled = false;
+
         db.diagnoses
             .orderBy("createdAt")
             .reverse()
             .toArray()
             .then((data) => {
-                if (!cancelled) setDiagnoses(data);
+           setDiagnoses(data);
             });
-        return () => {
-            cancelled = true;
-        };
+
     }, []);
 
     return (
