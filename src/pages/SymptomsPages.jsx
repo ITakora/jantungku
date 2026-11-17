@@ -165,7 +165,6 @@ const SymptomsPages = () => {
                         </form>
                     </div>
 
-                    {/* Table */}
                     <div className="bg-white shadow-md rounded-xl p-6 overflow-x-auto">
                         <h2 className="text-xl font-bold text-gray-800 mb-4">Symptoms</h2>
 

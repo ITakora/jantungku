@@ -5,6 +5,7 @@ import SignUp from "./pages/SignUp.jsx";
 import UserDashboard from "./pages/UserDashboard.jsx";
 import UserHistoryPage from "./pages/UserHistoryPage.jsx";
 import AdminDashboard from "./pages/AdminDashboard.jsx";
+import AdminHistoryPage from "./pages/AdminHistoryPage.jsx";
 
 
 
@@ -21,6 +22,7 @@ function App() {
             <Route path='/user/diagnosis' element={<UserDashboard />}/>
             <Route path='/user/history' element={<UserHistoryPage />}/>
             <Route path='/admin/symptoms' element={<AdminDashboard />}/>
+            <Route path='/admin/history' element={<AdminHistoryPage />}/>
         </Routes>
 
       </>
