@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import DashboardNavbar from "../components/DashboardNavbar.jsx";
 import { db } from "../db/db.jsx";
 
 const emptyForm = { code: "", name: "", cfExpert: "" };
@@ -103,7 +102,7 @@ const SymptomsPages = () => {
                                     value={form.code}
                                     onChange={handleChange}
                                     disabled={!!editingCode}
-                                    placeholder="D09"
+                                    placeholder="D10"
                                     className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#1F6B5C] disabled:bg-gray-100"
                                 />
                             </div>

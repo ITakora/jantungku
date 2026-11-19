@@ -21,8 +21,6 @@ export function calculateCF(items) {
             old = old + cf * (1 - old);
         } else if (old <= 0 && cf <= 0) {
             old = old + cf * (1 + old);
-        } else {
-            old = (old + cf) / (1 - Math.min(Math.abs(old), Math.abs(cf)));
         }
     }
 
